@@ -9,7 +9,9 @@ const { wishlistRoute } = require("./Routes/Wishlist.Route");
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin:"*"
+}));
 app.get("/", (req, res) => {
   res.send("Home Page");
 });
